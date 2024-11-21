@@ -1,11 +1,25 @@
 {
     "Django View Class": {
-        "prefix": "view",
+        "prefix": "view:class",
         "body": [
-          "class ${1:ViewName}(views.${2:ViewType}):",
+          "class ${1:ViewName}(${2|View,ListView,DetailView,CreateView,UpdateView,DeleteView,APIView|}):",
           "    def ${3:get}(self, request, *args, **kwargs):",
           "        return ${4:HttpResponse('Hello, world!')}"
         ],
         "description": "Django view class"
       },
+    "Django View Function": {
+        "prefix": "view:function",
+        "body": [
+            "def ${1:view_name}(request):",
+            "    if request.method == 'POST':",
+            "        # Process POST request here",
+            "        return HttpResponse('Form submitted!')",
+            "    else:",
+            "        # Handle GET request",
+            "        context = { '${2:key}': '${3:value}' }",
+            "        return render(request, '${4:template_name}.html', context)"
+        ],
+        "description": "Django view function"
+    }
 }
