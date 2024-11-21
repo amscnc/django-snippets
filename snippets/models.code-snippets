@@ -1,0 +1,120 @@
+{
+        "Django Model Class": {
+            "prefix": "model",
+            "body": [
+            "class ${1:ModelName}(models.Model):",
+            "    ${2:field_name} = models.${3|CharField,TextField,BooleanField,IntegerField,DateTimeField,ForeignKey|}(max_length=${4:255})",
+            "",
+            "    def __str__(self):",
+            "        return self.${2:field_name}"
+            ],
+            "description": "Django model class"
+        },
+        "Django Model Field": {
+            "prefix": "models",
+            "body": [
+            "${1:field_name} = models.${2|CharField,TextField,BooleanField,IntegerField,DateTimeField,ForeignKey|}(${3:arguments})"
+            ],
+            "description": "Django model field"
+        },
+        "Null Argument": {
+            "prefix": "null",
+            "body": "null=${1|True,False|}",
+            "description": "Allow NULL values in the database"
+        },
+        "Blank Argument": {
+            "prefix": "blank",
+            "body": "blank=${1|True,False|}",
+            "description": "Allow the field to be optional in forms"
+        },
+        "Default Argument": {
+            "prefix": "default",
+            "body": "default=${1|'default_value',None,datetime.now}",
+            "description": "Set a default value for the field"
+        },
+        "Choices Argument": {
+            "prefix": "choices",
+            "body": "choices=[('${1:key}', '${2:value}'), ('${3:key2}', '${4:value2}')]",
+            "description": "Define a set of choices for the field"
+        },
+        "Unique Argument": {
+            "prefix": "unique",
+            "body": "unique=${1|True,False|}",
+            "description": "Ensure unique values for the field"
+        },
+        "Primary Key Argument": {
+            "prefix": "primarykey",
+            "body": "primary_key=${1|True,False|}",
+            "description": "Mark the field as the primary key for the model"
+        },
+        "DB Index Argument": {
+            "prefix": "dbindex",
+            "body": "db_index=${1|True,False|}",
+            "description": "Create a database index on this field"
+        },
+        "Editable Argument": {
+            "prefix": "editable",
+            "body": "editable=${1|True,False|}",
+            "description": "Make the field editable in the admin or forms"
+        },
+        "Help Text Argument": {
+            "prefix": "helptext",
+            "body": "help_text=${1|'Helpful information about this field'}",
+            "description": "Provide additional information about the field"
+        },
+        "Verbose Name Argument": {
+            "prefix": "verbosename",
+            "body": "verbose_name=${1|'Human-readable name'}",
+            "description": "Specify a human-readable name for the field"
+        },
+        "On Delete Argument": {
+            "prefix": "ondelete",
+            "body": "on_delete=models.${1|CASCADE,SET_NULL,PROTECT,SET_DEFAULT,DO_NOTHING|}",
+            "description": "Specify behavior when a related object is deleted"
+        },
+        "Validators Argument": {
+            "prefix": "validators",
+            "body": "validators=[${1|min_length_validator,max_value_validator}]",
+            "description": "Provide custom validation for the field"
+        },
+        "DB Column Argument": {
+            "prefix": "dbcolumn",
+            "body": "db_column=${1|'column_name'}",
+            "description": "Set the database column name for the field"
+        },
+        "DB Tablespace Argument": {
+            "prefix": "dbtablespace",
+            "body": "db_tablespace=${1|'tablespace_name'}",
+            "description": "Set the tablespace for the field's index"
+        },
+        "Auto Created Argument": {
+            "prefix": "autocreated",
+            "body": "auto_created=${1|True,False|}",
+            "description": "Used for fields automatically created by Django"
+        },
+        "Index Argument": {
+            "prefix": "index",
+            "body": "index=${1|True,False|}",
+            "description": "Mark the field for indexing (Django 3.2+)"
+        },
+        "Custom Error Messages Argument": {
+            "prefix": "errormsg",
+            "body": "error_messages={${1|'required': 'This field is required', 'invalid': 'Invalid value'}}",
+            "description": "Override default error messages for the field"
+        },
+        "Unique For Date Argument": {
+            "prefix": "uniquefordate",
+            "body": "unique_for_date=${1|'date_field'}",
+            "description": "Ensure uniqueness with respect to a date field"
+        },
+        "Unique For Month Argument": {
+            "prefix": "uniqueformonth",
+            "body": "unique_for_month=${1|'date_field'}",
+            "description": "Ensure uniqueness with respect to a month field"
+        },
+        "Unique For Year Argument": {
+            "prefix": "uniqueforyear",
+            "body": "unique_for_year=${1|'date_field'}",
+            "description": "Ensure uniqueness with respect to a year field"
+        },
+}
