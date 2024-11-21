@@ -1,32 +1,20 @@
 {
-    "Django Model Class": {
-      "prefix": "model",
-      "body": [
-        "class ${1:ModelName}(models.Model):",
-        "    ${2:field_name} = models.${3:CharField}(max_length=${4:255})",
-        "",
-        "    def __str__(self):",
-        "        return self.${2:field_name}"
-      ],
-      "description": "Django model class"
-    },
-    "Django View Class": {
-      "prefix": "view",
-      "body": [
-        "class ${1:ViewName}(views.${2:ViewType}):",
-        "    def ${3:get}(self, request, *args, **kwargs):",
-        "        return ${4:HttpResponse('Hello, world!')}"
-      ],
-      "description": "Django view class"
-    },
-    "Generic Python Class": {
-      "prefix": "class",
-      "body": [
-        "class ${1:ClassName}:",
-        "    def __init__(self, ${2:args}):",
-        "        ${3:pass}"
-      ],
-      "description": "Generic Python class"
-    }
+  "Django View Class": {
+    "prefix": "view",
+    "body": [
+      "class ${1:ViewName}(views.${2:ViewType}):",
+      "    def ${3:get}(self, request, *args, **kwargs):",
+      "        return ${4:HttpResponse('Hello, world!')}"
+    ],
+    "description": "Django view class"
+  },
+  "Generic Python Class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName}:",
+      "    def __init__(self, ${2:args}):",
+      "        ${3:pass}"
+    ],
+    "description": "Generic Python class"
   }
-  
+}
