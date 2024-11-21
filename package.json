@@ -1,8 +1,12 @@
 {
   "name": "django-snippets",
-  "displayName": "django-snippets",
+  "displayName": "Django Snippets",
   "description": "Simple snippets to help you build django apps faster",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/funcyChaos/django-snippets"
+  },
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -22,6 +26,10 @@
       {
         "language": "python",
         "path": "./snippets/views.code-snippets"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/imports.code-snippets"
       }
     ]
   }

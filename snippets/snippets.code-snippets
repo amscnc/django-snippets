@@ -1,13 +1,4 @@
 {
-  "Django View Class": {
-    "prefix": "view",
-    "body": [
-      "class ${1:ViewName}(views.${2:ViewType}):",
-      "    def ${3:get}(self, request, *args, **kwargs):",
-      "        return ${4:HttpResponse('Hello, world!')}"
-    ],
-    "description": "Django view class"
-  },
   "Generic Python Class": {
     "prefix": "class",
     "body": [

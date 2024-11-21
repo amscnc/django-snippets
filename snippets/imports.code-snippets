@@ -1,0 +1,178 @@
+{
+    "HttpResponse from django.http": {
+      "prefix": "httpresponse",
+      "body": [
+        "from django.http import HttpResponse"
+      ],
+      "description": "Import HttpResponse from django.http"
+    },
+    "JsonResponse from django.http": {
+      "prefix": "jsonresponse",
+      "body": [
+        "from django.http import JsonResponse"
+      ],
+      "description": "Import JsonResponse from django.http"
+    },
+    "render from django.shortcuts": {
+      "prefix": "render",
+      "body": [
+        "from django.shortcuts import render"
+      ],
+      "description": "Import render from django.shortcuts"
+    },
+    "redirect from django.shortcuts": {
+      "prefix": "redirect",
+      "body": [
+        "from django.shortcuts import redirect"
+      ],
+      "description": "Import redirect from django.shortcuts"
+    },
+    "get_object_or_404 from django.shortcuts": {
+      "prefix": "getobjector404",
+      "body": [
+        "from django.shortcuts import get_object_or_404"
+      ],
+      "description": "Import get_object_or_404 from django.shortcuts"
+    },
+    "reverse from django.urls": {
+      "prefix": "reverse",
+      "body": [
+        "from django.urls import reverse"
+      ],
+      "description": "Import reverse from django.urls"
+    },
+    "path from django.urls": {
+      "prefix": "path",
+      "body": [
+        "from django.urls import path"
+      ],
+      "description": "Import path from django.urls"
+    },
+    "ListView from django.views.generic": {
+      "prefix": "listview",
+      "body": [
+        "from django.views.generic import ListView"
+      ],
+      "description": "Import ListView from django.views.generic"
+    },
+    "DetailView from django.views.generic": {
+      "prefix": "detailview",
+      "body": [
+        "from django.views.generic import DetailView"
+      ],
+      "description": "Import DetailView from django.views.generic"
+    },
+    "CreateView from django.views.generic": {
+      "prefix": "createview",
+      "body": [
+        "from django.views.generic import CreateView"
+      ],
+      "description": "Import CreateView from django.views.generic"
+    },
+    "UpdateView from django.views.generic": {
+      "prefix": "updateview",
+      "body": [
+        "from django.views.generic import UpdateView"
+      ],
+      "description": "Import UpdateView from django.views.generic"
+    },
+    "DeleteView from django.views.generic": {
+      "prefix": "deleteview",
+      "body": [
+        "from django.views.generic import DeleteView"
+      ],
+      "description": "Import DeleteView from django.views.generic"
+    },
+    "APIView from rest_framework.views": {
+      "prefix": "apiview",
+      "body": [
+        "from rest_framework.views import APIView"
+      ],
+      "description": "Import APIView from rest_framework.views"
+    },
+    "models from django.db": {
+      "prefix": "models",
+      "body": [
+        "from django.db import models"
+      ],
+      "description": "Import models from django.db"
+    },
+    "ModelForm from django.forms": {
+      "prefix": "modelform",
+      "body": [
+        "from django.forms import ModelForm"
+      ],
+      "description": "Import ModelForm from django.forms"
+    },
+    "Form from django.forms": {
+      "prefix": "form",
+      "body": [
+        "from django.forms import Form"
+      ],
+      "description": "Import Form from django.forms"
+    },
+    "admin from django.contrib": {
+      "prefix": "admin",
+      "body": [
+        "from django.contrib import admin"
+      ],
+      "description": "Import admin from django.contrib"
+    },
+    "User from django.contrib.auth.models": {
+      "prefix": "user",
+      "body": [
+        "from django.contrib.auth.models import User"
+      ],
+      "description": "Import User from django.contrib.auth.models"
+    },
+    "login_required from django.contrib.auth.decorators": {
+      "prefix": "loginrequired",
+      "body": [
+        "from django.contrib.auth.decorators import login_required"
+      ],
+      "description": "Import login_required from django.contrib.auth.decorators"
+    },
+    "UserCreationForm from django.contrib.auth.forms": {
+      "prefix": "usercreationform",
+      "body": [
+        "from django.contrib.auth.forms import UserCreationForm"
+      ],
+      "description": "Import UserCreationForm from django.contrib.auth.forms"
+    },
+    "AuthenticationForm from django.contrib.auth.forms": {
+      "prefix": "authenticationform",
+      "body": [
+        "from django.contrib.auth.forms import AuthenticationForm"
+      ],
+      "description": "Import AuthenticationForm from django.contrib.auth.forms"
+    },
+    "method_decorator from django.utils.decorators": {
+      "prefix": "methoddecorator",
+      "body": [
+        "from django.utils.decorators import method_decorator"
+      ],
+      "description": "Import method_decorator from django.utils.decorators"
+    },
+    "send_mail from django.core.mail": {
+      "prefix": "sendmail",
+      "body": [
+        "from django.core.mail import send_mail"
+      ],
+      "description": "Import send_mail from django.core.mail"
+    },
+    "message_constants from django.contrib.messages": {
+      "prefix": "messageconstants",
+      "body": [
+        "from django.contrib.messages import constants as message_constants"
+      ],
+      "description": "Import message_constants from django.contrib.messages"
+    },
+    "gettext_lazy as _ from django.utils.translation": {
+      "prefix": "gettextlazy",
+      "body": [
+        "from django.utils.translation import gettext_lazy as _"
+      ],
+      "description": "Import gettext_lazy as _ from django.utils.translation"
+    }
+  }
+  
