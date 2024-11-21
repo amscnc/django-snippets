@@ -1,65 +1,71 @@
-# django-snippets README
+# Django Snippets for Visual Studio Code
 
-This is the README for your extension "django-snippets". After writing up a brief description, we recommend including the following sections.
+This extension provides a collection of commonly used Django snippets for Visual Studio Code, aimed at making Django app development quicker and easier. With these snippets, you can easily generate boilerplate code for views, models, imports, forms, authentication, and more, helping you streamline your workflow.
+
+This project is open-source, and contributions are welcome! You can find the repository on [GitHub](https://github.com/amscnc/django-snippets).
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### 1. **Views Snippets**
+- `view:function`: Generates a basic function-based view.
+- `view:class`: Generates a class-based view with common views like `ListView`, `DetailView`, and `CreateView`.
+- [Coming Soon] `view:api`: Generates an API view using `APIView` from Django Rest Framework.
+- [Coming Soon] `view:render`: Generates a `render` function for returning HTML responses.
 
-For example if there is an image subfolder under your extension project workspace:
+### 2. **Model Snippets**
+- `model`: Generates a basic Django model.
+- `charfield`: Generates a `CharField` for Django models.
+- `textfield`: Generates a `TextField` for Django models.
+- `datefield`: Generates a `DateField` for Django models.
+- `floatfield`: Generates a `FloatField` for Django models.
+- `integerfield`: Generates an `IntegerField` for Django models.
+- `booleanfield`: Generates a `BooleanField` for Django models.
+- `date-time`: Generates a `DateTimeField` for Django models.
+- `decimal`: Generates a `DecimalField` for Django models.
+- `slugfield`: Generates a `SlugField` for Django models.
 
-\!\[feature X\]\(images/feature-x.png\)
+<!-- ### 3. **Forms & Validation Snippets**
+- `form`: Generates a form class with fields.
+- `model-form`: Generates a form based on a model using `ModelForm`.
+- `form-field`: Adds a form field like `CharField`, `IntegerField`, etc. -->
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 3. **Common Django Imports**
+- `httpresponse`: Import `HttpResponse` from `django.http`.
+- `jsonresponse`: Import `JsonResponse` from `django.http`.
+- `user`: Import `User` from `django.contrib.auth.models`.
+- `models`: Import `models` from `django.db`.
+- `admin`: Import `admin` from `django.contrib`.
+- `gettextlazy`: Import `gettext_lazy` for translation.
+- `views`: Import `views` from `django.shortcuts`.
+- `redirect`: Import `redirect` from `django.shortcuts`.
 
-## Requirements
+<!-- ### 5. **Authentication Snippets**
+- `login-required`: Adds a `login_required` decorator to a view function.
+- `user-authentication`: Generates a user authentication check. -->
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+<!-- ### 6. **URL Snippets**
+- `url-path`: Import `path` from `django.urls`.
+- `url-reverse`: Import `reverse` from `django.urls`. -->
 
-## Extension Settings
+<!-- ### 7. **Miscellaneous Snippets**
+- `admin-register`: Registers a model with the Django admin interface. -->
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+<!-- ## Installation
 
-For example:
+1. Open Visual Studio Code.
+2. Go to the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+3. Search for "Django Snippets" and click Install. -->
 
-This extension contributes the following settings:
+Alternatively, you can install it manually from the VSIX file.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Usage
 
-## Known Issues
+Once installed, you can type the snippet prefix in your Django project files (e.g., `view-function`) and press `Tab` to expand the snippet. Below are some examples of how to use the snippets.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+<!-- ### Example 1: Function View
+Type `view:function` and press `Tab` to expand it into a basic function-based view:
 
-## Release Notes
+```python
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+def my_view(request):
+    return HttpResponse("Hello, World!") -->
