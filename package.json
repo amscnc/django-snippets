@@ -1,0 +1,20 @@
+{
+  "name": "django-snippets",
+  "displayName": "django-snippets",
+  "description": "Simple snippets to help you build django apps faster",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
