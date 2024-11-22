@@ -3,7 +3,7 @@
             "prefix": "model",
             "body": [
             "class ${1:ModelName}(models.Model):",
-            "    ${2:field_name} = models.${3|CharField,TextField,BooleanField,IntegerField,DateTimeField,ForeignKey|}(max_length=${4:255})",
+            "    ${2:field_name} = models.${3|CharField,TextField,BooleanField,IntegerField,BigIntegerField,SmallIntegerField,PositiveIntegerField,PositiveSmallIntegerField,FloatField,DecimalField,DateField,TimeField,DateTimeField,DurationField,FileField,ImageField,ForeignKey,OneToOneField,ManyToManyField,SlugField,UUIDField,JSONField,EmailField,URLField,IPAddressField,GenericIPAddressField|}(${4|null,blank,default,choices,unique,primarykey,ondelete|})",
             "",
             "    def __str__(self):",
             "        return self.${2:field_name}"
@@ -13,9 +13,139 @@
         "Django Model Field": {
             "prefix": "models",
             "body": [
-            "${1:field_name} = models.${2|CharField,TextField,BooleanField,IntegerField,DateTimeField,ForeignKey|}(${3:arguments})"
+                "${1:field_name} = models.${2|CharField,TextField,BooleanField,IntegerField,BigIntegerField,SmallIntegerField,PositiveIntegerField,PositiveSmallIntegerField,FloatField,DecimalField,DateField,TimeField,DateTimeField,DurationField,FileField,ImageField,ForeignKey,OneToOneField,ManyToManyField,SlugField,UUIDField,JSONField,EmailField,URLField,IPAddressField,GenericIPAddressField|}(${3|null,blank,default,choices,unique,primarykey,ondelete|})"
             ],
             "description": "Django model field"
+        },
+        "CharField": {
+            "prefix": "CharField",
+            "body": "models.CharField(max_length=${1:100}${2:, blank=${3:True}, null=${4:True}})",
+            "description": "Django CharField"
+        },
+        "TextField": {
+        "prefix": "TextField",
+        "body": "models.TextField(${1:blank=${2:True}, null=${3:True}})",
+        "description": "Django TextField"
+        },
+        "BooleanField": {
+        "prefix": "BooleanField",
+        "body": "models.BooleanField(default=${1:False})",
+        "description": "Django BooleanField"
+        },
+        "IntegerField": {
+        "prefix": "IntegerField",
+        "body": "models.IntegerField(${1:blank=${2:True}, null=${3:True}, default=${4:0}})",
+        "description": "Django IntegerField"
+        },
+        "BigIntegerField": {
+        "prefix": "BigIntegerField",
+        "body": "models.BigIntegerField(${1:blank=${2:True}, null=${3:True}, default=${4:0}})",
+        "description": "Django BigIntegerField"
+        },
+        "SmallIntegerField": {
+        "prefix": "SmallIntegerField",
+        "body": "models.SmallIntegerField(${1:blank=${2:True}, null=${3:True}, default=${4:0}})",
+        "description": "Django SmallIntegerField"
+        },
+        "PositiveIntegerField": {
+        "prefix": "PositiveIntegerField",
+        "body": "models.PositiveIntegerField(${1:blank=${2:True}, null=${3:True}, default=${4:0}})",
+        "description": "Django PositiveIntegerField"
+        },
+        "PositiveSmallIntegerField": {
+        "prefix": "PositiveSmallIntegerField",
+        "body": "models.PositiveSmallIntegerField(${1:blank=${2:True}, null=${3:True}, default=${4:0}})",
+        "description": "Django PositiveSmallIntegerField"
+        },
+        "FloatField": {
+        "prefix": "FloatField",
+        "body": "models.FloatField(${1:blank=${2:True}, null=${3:True}, default=${4:0.0}})",
+        "description": "Django FloatField"
+        },
+        "DecimalField": {
+        "prefix": "DecimalField",
+        "body": "models.DecimalField(max_digits=${1:10}, decimal_places=${2:2}${3:, blank=${4:True}, null=${5:True}})",
+        "description": "Django DecimalField"
+        },
+        "DateField": {
+        "prefix": "DateField",
+        "body": "models.DateField(${1:blank=${2:True}, null=${3:True}, auto_now=${4:False}, auto_now_add=${5:False}})",
+        "description": "Django DateField"
+        },
+        "TimeField": {
+        "prefix": "TimeField",
+        "body": "models.TimeField(${1:blank=${2:True}, null=${3:True}, auto_now=${4:False}, auto_now_add=${5:False}})",
+        "description": "Django TimeField"
+        },
+        "DateTimeField": {
+        "prefix": "DateTimeField",
+        "body": "models.DateTimeField(${1:blank=${2:True}, null=${3:True}, auto_now=${4:False}, auto_now_add=${5:False}})",
+        "description": "Django DateTimeField"
+        },
+        "DurationField": {
+        "prefix": "DurationField",
+        "body": "models.DurationField(${1:blank=${2:True}, null=${3:True}})",
+        "description": "Django DurationField"
+        },
+        "FileField": {
+        "prefix": "FileField",
+        "body": "models.FileField(upload_to='${1:uploads/}'${2:, blank=${3:True}, null=${4:True}})",
+        "description": "Django FileField"
+        },
+        "ImageField": {
+        "prefix": "ImageField",
+        "body": "models.ImageField(upload_to='${1:images/}'${2:, blank=${3:True}, null=${4:True}})",
+        "description": "Django ImageField"
+        },
+        "ForeignKey": {
+        "prefix": "ForeignKey",
+        "body": "models.ForeignKey(${1:ModelName}, on_delete=${2:models.CASCADE}${3:, blank=${4:True}, null=${5:True}})",
+        "description": "Django ForeignKey"
+        },
+        "OneToOneField": {
+        "prefix": "OneToOneField",
+        "body": "models.OneToOneField(${1:ModelName}, on_delete=${2:models.CASCADE}${3:, blank=${4:True}, null=${5:True}})",
+        "description": "Django OneToOneField"
+        },
+        "ManyToManyField": {
+        "prefix": "ManyToManyField",
+        "body": "models.ManyToManyField(${1:ModelName}${2:, blank=${3:True}, related_name='${4:related_name}'}",
+        "description": "Django ManyToManyField"
+        },
+        "SlugField": {
+        "prefix": "SlugField",
+        "body": "models.SlugField(${1:max_length=${2:50}, blank=${3:True}, null=${4:True}})",
+        "description": "Django SlugField"
+        },
+        "UUIDField": {
+        "prefix": "UUIDField",
+        "body": "models.UUIDField(${1:blank=${2:True}, null=${3:True}, default=${4:uuid.uuid4}})",
+        "description": "Django UUIDField"
+        },
+        "JSONField": {
+        "prefix": "JSONField",
+        "body": "models.JSONField(${1:blank=${2:True}, null=${3:True}, default=${4:dict}})",
+        "description": "Django JSONField"
+        },
+        "EmailField": {
+        "prefix": "EmailField",
+        "body": "models.EmailField(${1:max_length=${2:100}, blank=${3:True}, null=${4:True}})",
+        "description": "Django EmailField"
+        },
+        "URLField": {
+        "prefix": "URLField",
+        "body": "models.URLField(${1:max_length=${2:200}, blank=${3:True}, null=${4:True}})",
+        "description": "Django URLField"
+        },
+        "IPAddressField": {
+        "prefix": "IPAddressField",
+        "body": "models.IPAddressField(${1:blank=${2:True}, null=${3:True}})",
+        "description": "Django IPAddressField"
+        },
+        "GenericIPAddressField": {
+        "prefix": "GenericIPAddressField",
+        "body": "models.GenericIPAddressField(protocol='${1:both}', unpack_ipv4=${2:False}${3:, blank=${4:True}, null=${5:True}})",
+        "description": "Django GenericIPAddressField"
         },
         "Null Argument": {
             "prefix": "null",
