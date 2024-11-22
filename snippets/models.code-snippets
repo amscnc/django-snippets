@@ -1,6 +1,6 @@
 {
         "Django Model Class": {
-            "prefix": "model",
+            "prefix": "class:model",
             "body": [
             "class ${1:ModelName}(models.Model):",
             "    ${2:field_name} = models.${3|CharField,TextField,BooleanField,IntegerField,BigIntegerField,SmallIntegerField,PositiveIntegerField,PositiveSmallIntegerField,FloatField,DecimalField,DateField,TimeField,DateTimeField,DurationField,FileField,ImageField,ForeignKey,OneToOneField,ManyToManyField,SlugField,UUIDField,JSONField,EmailField,URLField,IPAddressField,GenericIPAddressField|}(${4|null,blank,default,choices,unique,primarykey,ondelete|})",

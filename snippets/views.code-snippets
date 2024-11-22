@@ -1,6 +1,6 @@
 {
     "Django View Class": {
-        "prefix": "view:class",
+        "prefix": "class:view",
         "body": [
           "class ${1:ViewName}(${2|View,ListView,DetailView,CreateView,UpdateView,DeleteView,APIView|}):",
           "    def ${3:get}(self, request, *args, **kwargs):",
@@ -9,7 +9,7 @@
         "description": "Django view class"
       },
     "Django View Function": {
-        "prefix": "view:function",
+        "prefix": "def:view",
         "body": [
             "def ${1:view_name}(request):",
             "    if request.method == 'POST':",
